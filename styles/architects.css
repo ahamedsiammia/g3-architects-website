@@ -11,7 +11,12 @@
 /* shared style */
 .display-flex {
     display: flex;
+    flex-direction: row;
 }
+.text-primary{
+    color: #FF900E;
+}
+
 /* dark-02 */
 .text-gray{
     color: #424242;
@@ -33,6 +38,13 @@
     border: none;
 
 }
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main>section{
+    margin-top: 130px;
+}
 
 /* header style */
 
@@ -43,12 +55,12 @@
     align-items: center;
 }
 .brand{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 3rem;
 }
 .nav-item{
     list-style: none; 
-    margin-right: 20px  
+    margin-right: 20px ; 
 }
 .nav-links{
     text-decoration: none;
@@ -68,14 +80,73 @@
 }
 .bannar-title{
     font-size: 4rem;
-    font-weight: bold;
+    font-weight:700;
 }
 .bannar-image{
     width: 100%;
 }
-/* responsive midea quary */
+/* team and features related style */
+.teams{
+    align-items: center;
+}
+
+.image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    
+}
+
+.our-features{
+    margin-left: 73px;
+    max-width: 530px;
+}
+.feature-title{
+    font-size: 2.81rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 500;
+}
+
+/* responsive mediam quary */
 @media screen and (max-width:576px) {
-    .navber, .bannar{
+    .navber,
+    .bannar,
+    .teams{
         flex-direction: column;
     }
+    .image-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-features{
+        margin-left: 20px;
+    }
+    .display-flex {
+    display: flex;
+    flex-direction: column;
+    }
 }
+/* mediam size device */
+ @media screen and (min-width:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
+    .image-container img{
+        width: 85%;
+    }
+    .image-container{
+        gap: 0;
+    }
+    .navber, .bannar{
+        width: 90%;
+    }
+        .display-flex {
+    display: flex;
+    flex-direction: column;
+}
+    
+ }
